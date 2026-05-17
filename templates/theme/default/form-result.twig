@@ -1,17 +1,24 @@
 {% extends '@theme/layout.twig' %}
 
-{% block title %}{{ ok ? 'Thanks' : 'Try again' }} · {{ site.name }}{% endblock %}
+{% block title %}{{ ok ? 'Thank you' : 'Try again' }} — Anyo at Disenyo{% endblock %}
 
 {% block content %}
-<div class="wrap" style="text-align:center;padding:4rem 0;">
+<section class="center-stage">
     {% if ok %}
-        <h1>Thanks for getting in touch.</h1>
-        <p class="lede">We received your message.</p>
+        <span class="eyebrow">Inquiry received</span>
+        <h1 class="display" style="margin-top:1.5rem; font-weight:300;">Thank you — we will write back soon.</h1>
+        <p style="margin-top:1.5rem;">A reply usually takes one to three working days. In the meantime, the work and the studio pages give a fuller sense of how we approach a project.</p>
+        <div style="display:flex; gap:1rem; margin-top:2.5rem; flex-wrap:wrap; justify-content:center;">
+            <a class="btn btn-primary" href="/">Back home</a>
+            <a class="btn btn-ghost" href="/work">See the work</a>
+        </div>
     {% else %}
-        <h1>Something went wrong.</h1>
-        <ul style="display:inline-block;text-align:left;">
-            {% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul>
-        <p style="margin-top:2rem;"><a href="javascript:history.back()">← Go back</a></p>
+        <span class="eyebrow">A few things still need fixing</span>
+        <h1 class="display" style="margin-top:1.5rem; font-weight:300;">The form did not send.</h1>
+        <ul style="margin-top:1.5rem; text-align:left; list-style:disc; padding-left:1.25rem; color:var(--ink-soft);">
+            {% for e in errors %}<li>{{ e }}</li>{% endfor %}
+        </ul>
+        <p style="margin-top:2rem;"><a class="arrow-link" href="javascript:history.back()">Go back to the form</a></p>
     {% endif %}
-</div>
+</section>
 {% endblock %}

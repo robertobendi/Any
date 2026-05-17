@@ -3,12 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{{ site.name }} — Architecture rooted in Batangas{% endblock %}</title>
-    {% block meta %}
-    <meta name="description" content="{% block description %}A small architectural practice in Batangas City designing homes and spaces that belong to the Filipino climate, light, and the people who live in them.{% endblock %}">
-    {% endblock %}
-    <meta name="theme-color" content="#F2EBDE">
-    <link rel="icon" type="image/jpeg" href="/uploads/logo-anyo-at-disenyo.jpg">
+    <title>Studio — Anyo at Disenyo</title>
+        <meta name="description" content="Anyo at Disenyo is a small Filipino architecture studio in Batangas City. Our practice, services, and the way we work with clients on tropical-modern houses and interiors.">
+        <meta name="theme-color" content="#F2EBDE">
+    <link rel="icon" type="image/jpeg" href="uploads/logo-anyo-at-disenyo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -826,16 +824,14 @@
         }
         @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
     </style>
-    {% block head %}{% endblock %}
-</head>
+    </head>
 <body>
-    <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+    <a href="studio.html#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
-    <header class="site-header{% if hero_header is defined and hero_header %} is-translucent{% endif %}" id="siteHeader">
+    <header class="site-header" id="siteHeader">
         <div class="wrap inner">
-            <a class="brand" href="/" aria-label="Anyo at Disenyo — home">
-                {# Mark: an interlocked "ad" monogram rendered as inline SVG so it scales crisply at small sizes. #}
-                <svg class="mark" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" aria-hidden="true">
+            <a class="brand" href="index.html" aria-label="Anyo at Disenyo — home">
+                                <svg class="mark" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" aria-hidden="true">
                     <path d="M21 15c-7 0-12 6-12 15s5 15 12 15 12-6 12-15-5-15-12-15z"/>
                     <path d="M39 15c-7 0-12 6-12 15s5 15 12 15 12-6 12-15-5-15-12-15z"/>
                 </svg>
@@ -843,16 +839,163 @@
             </a>
             <button class="menu-toggle" aria-controls="primaryNav" aria-expanded="false" id="menuToggle">Menu</button>
             <nav class="primary-nav" id="primaryNav" aria-label="Primary">
-                <a href="/work"{% if active_page is defined and active_page == 'work' %} aria-current="page"{% endif %}>Work</a>
-                <a href="/studio"{% if active_page is defined and active_page == 'studio' %} aria-current="page"{% endif %}>Studio</a>
-                <a href="/contact"{% if active_page is defined and active_page == 'contact' %} aria-current="page"{% endif %}>Contact</a>
+                <a href="work.html">Work</a>
+                <a href="studio.html" aria-current="page">Studio</a>
+                <a href="contact.html">Contact</a>
                 <a class="nav-fb" href="https://www.facebook.com/anyoatdisenyo" target="_blank" rel="noopener" aria-label="Facebook page">Facebook</a>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        {% block content %}{% endblock %}
+        
+<section class="page-intro">
+    <div class="wrap">
+        <div class="offset-col">
+            <span class="eyebrow">The studio</span>
+            <h1>A small Filipino practice, partner-led, working at the scale of one careful project at a time.</h1>
+            <p class="lead" style="margin-top:2.5rem; color:var(--ink-soft);">Anyo at Disenyo (Tagalog for "form and design") was founded in Batangas City. We design houses, interiors, and small commercial spaces for clients who want a thoughtful, slow-built result — and who are willing to invest in the questions before the drawings.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div style="max-width:36rem; margin-bottom:4rem;">
+            <span class="eyebrow">Philosophy</span>
+            <h2 style="margin-top:.75rem;">Three things we believe about Filipino buildings.</h2>
+        </div>
+
+        <div class="philosophy">
+            <div class="block">
+                <span class="num">01</span>
+                <div>
+                    <h3>The climate writes the brief.</h3>
+                    <p>Heat, humidity, monsoon, and afternoon glare are the most honest design constraints we have. A house in Batangas should sit a little above the ground, breathe through both sides, and shelter the rooms that matter most under deep shade. We start every project here and let the rest follow.</p>
+                </div>
+            </div>
+            <div class="block">
+                <span class="num">02</span>
+                <div>
+                    <h3>The materials are already nearby.</h3>
+                    <p>Narra, gemelina, adobe block, lime plaster, capiz, raw concrete. We design with what local craftsmen handle every week, in finishes that age into a place rather than against it. Imported finishes are a last resort, not a first instinct.</p>
+                </div>
+            </div>
+            <div class="block">
+                <span class="num">03</span>
+                <div>
+                    <h3>Small is the point.</h3>
+                    <p>We stay deliberately small so the principal architect is in the room when the door details are decided, the cabinetmaker is hired, and the punch list is walked. There is no junior team translating second-hand notes onto your house.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-sm">
+    <div class="wrap">
+        <div style="max-width:36rem; margin-bottom:3rem;">
+            <span class="eyebrow">Services</span>
+            <h2 style="margin-top:.75rem;">What we are commissioned to do.</h2>
+        </div>
+        <div class="services-grid">
+            <div>
+                <span class="meta">01 · Architecture</span>
+                <h3>New houses & buildings</h3>
+                <p>Single-family residences and small commercial buildings — schematic design through construction documents, with a site visit cadence the project actually needs (usually weekly during framing and finishing).</p>
+            </div>
+            <div>
+                <span class="meta">02 · Interiors</span>
+                <h3>Interior architecture</h3>
+                <p>Layout, millwork, lighting, and material specification — for new buildings or as a stand-alone renovation. We draw every cabinet and detail door rather than off-loading the decisions to a contractor.</p>
+            </div>
+            <div>
+                <span class="meta">03 · Planning</span>
+                <h3>Planning & feasibility</h3>
+                <p>For clients evaluating a site, programming a multi-phase development, or testing how much house a small lot can hold. Useful before you commit to a full commission — sometimes the answer is "not this site."</p>
+            </div>
+            <div>
+                <span class="meta">04 · Project management</span>
+                <h3>Construction administration</h3>
+                <p>We administer the construction phase on every project we design — coordinating the contractor, checking the work against the documents, and resolving the inevitable site decisions in writing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div style="margin-bottom:3.5rem;">
+            <span class="eyebrow">Principal</span>
+            <h2 style="margin-top:.75rem;">The architect behind the practice.</h2>
+        </div>
+
+        <div class="principal">
+            <figure style="margin:0;">
+                <div class="portrait">
+                                        <img src="uploads/capiz_shell_window_close_up_jpg.jpg" alt="Close-up of a wood-framed capiz shell window — pale shells set into a warm narra grid, lit from outside.">
+                </div>
+                <figcaption class="meta" style="margin:1rem 0 0; text-transform:none; letter-spacing:0;">A material still life from the studio archive — capiz set into narra, the studio's longest-running pair of materials.</figcaption>
+            </figure>
+            <div class="bio">
+                <p style="font-family:'Fraunces',serif; font-weight:300; font-size:clamp(1.5rem,2.5vw,2rem); letter-spacing:-.015em; line-height:1.25; color:var(--ink); margin:0 0 1.5rem;">A registered architect working out of Batangas City since 2014.</p>
+                <p>The studio was founded as a one-person practice and has remained a tight one — taking on roughly five to seven commissions a year. We do not subcontract design; every drawing is produced in-house. We do not take on work outside Luzon or projects we cannot personally visit during construction.</p>
+                <p>Before founding the studio, the principal worked for ten years in Manila-based practices on residential and small institutional work, and trained in architecture at the University of Santo Tomas.</p>
+
+                <h3 style="font-family:'Inter',sans-serif; font-size:.75rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--tabako); margin:2.5rem 0 0;">Credentials</h3>
+                <dl>
+                    <dt>Education</dt>
+                    <dd>B.S. Architecture — University of Santo Tomas <span style="color:var(--tabako)">[verify]</span></dd>
+                    <dt>Licence</dt>
+                    <dd>PRC-registered architect, Philippines <span style="color:var(--tabako)">[reg. no. — verify]</span></dd>
+                    <dt>Founded</dt>
+                    <dd>2014, Batangas City</dd>
+                    <dt>Teaches</dt>
+                    <dd>Guest critic, undergraduate design studios <span style="color:var(--tabako)">[verify]</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-sm">
+    <div class="wrap">
+        <div style="max-width:36rem; margin-bottom:3rem;">
+            <span class="eyebrow">How we work</span>
+            <h2 style="margin-top:.75rem;">A project, end to end, in four stages.</h2>
+        </div>
+        <div class="process">
+            <div>
+                <span class="num">01</span>
+                <h4>Inquiry</h4>
+                <p>A first conversation, usually at the site or over coffee. We listen for the brief that hasn't been written yet, and decide together whether the commission is a fit for both of us.</p>
+            </div>
+            <div>
+                <span class="num">02</span>
+                <h4>Schematic</h4>
+                <p>Site analysis, programming, and the first plans and massing. Two or three iterations, presented in person. The shape of the project is set here, in pencil.</p>
+            </div>
+            <div>
+                <span class="num">03</span>
+                <h4>Documentation</h4>
+                <p>Full construction documents, specifications, and the details that decide how the building will actually be built. Permits filed, contractor bidding supported.</p>
+            </div>
+            <div>
+                <span class="num">04</span>
+                <h4>Construction</h4>
+                <p>Weekly visits during framing and finishing, written field reports, and a final punch list walked with the contractor before turnover. We stay until you move in.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-strip">
+    <span class="eyebrow">Begin a project</span>
+    <h2 class="display" style="margin-top:1rem; font-weight:300;">Tell us about your site.</h2>
+    <p class="lead" style="max-width:46ch; margin: 1.5rem auto 2.5rem; color:var(--ink-soft);">If a paragraph or two of background fits the message field, that is more than enough to start.</p>
+    <a class="btn btn-primary" href="contact.html">Begin a project</a>
+</section>
+
     </main>
 
     <footer class="site-footer">
@@ -881,14 +1024,14 @@
                     </ul>
                     <h4 style="margin-top:1.75rem;">Sitemap</h4>
                     <ul>
-                        <li><a href="/work">Work</a></li>
-                        <li><a href="/studio">Studio</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="studio.html">Studio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© {{ "now"|date('Y') }} Anyo at Disenyo</span>
+                <span>© 2026 Anyo at Disenyo</span>
                 <span>Architectural services · Batangas, PH</span>
             </div>
         </div>

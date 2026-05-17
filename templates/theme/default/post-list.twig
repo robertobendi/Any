@@ -1,24 +1,37 @@
 {% extends '@theme/layout.twig' %}
 
-{% block title %}Blog · {{ site.name }}{% endblock %}
+{% block title %}Journal — Anyo at Disenyo{% endblock %}
+{% block description %}Notes from the studio on Filipino architecture, materials, and current projects.{% endblock %}
 
 {% block content %}
-<div class="wrap">
-    <h1>Blog</h1>
-    {% if posts|length == 0 %}
-        <div class="empty-state">
-            <p>No posts yet — check back soon.</p>
+<section class="page-intro">
+    <div class="wrap">
+        <div class="offset-col">
+            <span class="eyebrow">Journal</span>
+            <h1>Field notes from the studio.</h1>
+            <p class="lead" style="margin-top:2rem; color:var(--ink-soft);">Occasional writing on materials, climate, and the projects we are in the middle of. Sparse on purpose — we would rather draw than blog.</p>
         </div>
-    {% else %}
-        {% for post in posts %}
-            <a class="post-card" href="/blog/{{ post.slug }}">
-                <h2>{{ post.field('title', '(untitled)') }}</h2>
-                <div class="date">{{ (post.publishAt ?? post.createdAt)|date('F j, Y') }}</div>
-                {% if post.field('excerpt') %}
-                    <p>{{ post.field('excerpt') }}</p>
-                {% endif %}
-            </a>
-        {% endfor %}
-    {% endif %}
-</div>
+    </div>
+</section>
+
+<section class="section-sm">
+    <div class="wrap">
+        <div class="offset-col" style="max-width:760px;">
+            {% if posts|length == 0 %}
+                <p class="lead" style="color:var(--ink-soft);">Nothing published yet. The first piece is being written.</p>
+                <div style="margin-top:2.5rem;"><a class="arrow-link" href="/work">See the work instead</a></div>
+            {% else %}
+                {% for post in posts %}
+                    <a class="post-card" style="display:block; padding:2rem 0; border-bottom:1px solid var(--lime); text-decoration:none; color:inherit;" href="/journal/{{ post.slug }}">
+                        <span class="meta">{{ (post.publishAt ?? post.createdAt)|date('F Y') }}</span>
+                        <h2 style="margin:.5rem 0;">{{ post.field('title', '(untitled)') }}</h2>
+                        {% if post.field('excerpt') %}
+                            <p style="color:var(--ink-soft); margin:0;">{{ post.field('excerpt') }}</p>
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
 {% endblock %}

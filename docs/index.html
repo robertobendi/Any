@@ -3,12 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{{ site.name }} — Architecture rooted in Batangas{% endblock %}</title>
-    {% block meta %}
-    <meta name="description" content="{% block description %}A small architectural practice in Batangas City designing homes and spaces that belong to the Filipino climate, light, and the people who live in them.{% endblock %}">
-    {% endblock %}
-    <meta name="theme-color" content="#F2EBDE">
-    <link rel="icon" type="image/jpeg" href="/uploads/logo-anyo-at-disenyo.jpg">
+    <title>Anyo at Disenyo — Architecture rooted in Batangas</title>
+        <meta name="description" content="Anyo at Disenyo is a small architectural practice in Batangas City designing homes and spaces shaped by the Filipino climate, light, and the people who live in them.">
+        <meta name="theme-color" content="#F2EBDE">
+    <link rel="icon" type="image/jpeg" href="uploads/logo-anyo-at-disenyo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -826,16 +824,14 @@
         }
         @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
     </style>
-    {% block head %}{% endblock %}
-</head>
+    </head>
 <body>
-    <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+    <a href="index.html#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
-    <header class="site-header{% if hero_header is defined and hero_header %} is-translucent{% endif %}" id="siteHeader">
+    <header class="site-header is-translucent" id="siteHeader">
         <div class="wrap inner">
-            <a class="brand" href="/" aria-label="Anyo at Disenyo — home">
-                {# Mark: an interlocked "ad" monogram rendered as inline SVG so it scales crisply at small sizes. #}
-                <svg class="mark" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" aria-hidden="true">
+            <a class="brand" href="index.html" aria-label="Anyo at Disenyo — home">
+                                <svg class="mark" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" aria-hidden="true">
                     <path d="M21 15c-7 0-12 6-12 15s5 15 12 15 12-6 12-15-5-15-12-15z"/>
                     <path d="M39 15c-7 0-12 6-12 15s5 15 12 15 12-6 12-15-5-15-12-15z"/>
                 </svg>
@@ -843,16 +839,145 @@
             </a>
             <button class="menu-toggle" aria-controls="primaryNav" aria-expanded="false" id="menuToggle">Menu</button>
             <nav class="primary-nav" id="primaryNav" aria-label="Primary">
-                <a href="/work"{% if active_page is defined and active_page == 'work' %} aria-current="page"{% endif %}>Work</a>
-                <a href="/studio"{% if active_page is defined and active_page == 'studio' %} aria-current="page"{% endif %}>Studio</a>
-                <a href="/contact"{% if active_page is defined and active_page == 'contact' %} aria-current="page"{% endif %}>Contact</a>
+                <a href="work.html">Work</a>
+                <a href="studio.html">Studio</a>
+                <a href="contact.html">Contact</a>
                 <a class="nav-fb" href="https://www.facebook.com/anyoatdisenyo" target="_blank" rel="noopener" aria-label="Facebook page">Facebook</a>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        {% block content %}{% endblock %}
+        
+<section class="hero" aria-label="Introduction">
+        <img class="hero-img" src="uploads/bahay_na_bato_houses_of_philippines_jpg.jpg" alt="Stone-and-wood Filipino vernacular house with tiled roof against the Batangas sky.">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner wrap">
+        <div class="meta-row">
+            <div>Anyo <em style="font-style:italic">at</em> Disenyo</div>
+            <div style="margin-top:.35rem; opacity:.7">Batangas, PH · est. 2014</div>
+        </div>
+        <span class="eyebrow" style="color:rgba(242,235,222,.8);">Architectural services · Batangas, Philippines</span>
+        <h1 class="display" style="margin-top:1rem;">Architecture rooted in Batangas.</h1>
+        <p>A small practice designing homes and spaces that belong to the Filipino climate, light, and the people who live in them.</p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="contact.html">Begin a project</a>
+            <a class="btn btn-ghost on-dark" href="work.html">See the work</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="offset-col">
+            <span class="eyebrow">The studio</span>
+            <h2 style="margin-top:1rem;">A studio built around the slow questions: where a door wants to open, where the breeze enters, where the family eats at six.</h2>
+            <p class="lead" style="margin-top:2rem; color:var(--ink-soft);">We work from a small office in Batangas City on residences, renovations, and modest commercial projects across Calabarzon. Every commission is partner-led and stays partner-led from first conversation to last punch list.</p>
+            <div style="margin-top:2.5rem;">
+                <a class="arrow-link" href="studio.html">More about the practice</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+    <div class="wrap">
+        <header style="display:flex; justify-content:space-between; align-items:end; gap:2rem; margin-bottom:3.5rem;">
+            <div>
+                <span class="eyebrow">Selected work</span>
+                <h2 style="margin-top:.75rem;">Three recent projects.</h2>
+            </div>
+            <div style="white-space:nowrap;">
+                <a class="arrow-link" href="work.html">All projects</a>
+            </div>
+        </header>
+
+                <a class="project-card" href="work.html">
+            <div class="frame">
+                <img src="uploads/bahay_na_bato_houses_jpg.jpg" alt="Courtyard view of two heritage-inspired houses with red-tile roofs and capiz screens, framed by a tall lamppost.">
+            </div>
+            <div class="head">
+                <div>
+                    <span class="meta">2024 · Lemery, Batangas</span>
+                    <h3 style="margin-top:.5rem;">Casa Taal</h3>
+                    <p class="descriptor">A two-storey courtyard house for an extended family, organised around an interior plaza and capiz screens that filter the afternoon sun.</p>
+                </div>
+                <div class="right-meta meta">
+                    <div>Architecture</div>
+                    <div>Interiors</div>
+                </div>
+            </div>
+        </a>
+
+        <a class="project-card" href="work.html">
+            <div class="frame">
+                <img src="uploads/view_ofthe_casa_bizantina_from_the_plaza_of_las_casas_filipi.jpg" alt="A Filipino-Spanish heritage house seen across a quiet plaza, late afternoon light on the facade.">
+            </div>
+            <div class="head">
+                <div>
+                    <span class="meta">2023 · Lipa, Batangas</span>
+                    <h3 style="margin-top:.5rem;">Bukal Residence</h3>
+                    <p class="descriptor">A family home clad in narra and adobe, set behind a quiet street wall. Lanai and bedrooms open to a long garden that runs the length of the lot.</p>
+                </div>
+                <div class="right-meta meta">
+                    <div>Architecture</div>
+                    <div>Landscape</div>
+                </div>
+            </div>
+        </a>
+
+        <a class="project-card" href="work.html">
+            <div class="frame">
+                <img src="uploads/quema_house_outside_view_jpg.jpg" alt="Two-storey wooden Filipino ancestral house with capiz-screen wall, photographed in monochrome.">
+            </div>
+            <div class="head">
+                <div>
+                    <span class="meta">2023 · Batangas City</span>
+                    <h3 style="margin-top:.5rem;">Studio Anyá — Wellness Fitout</h3>
+                    <p class="descriptor">A 140-square-metre interior renovation of a 1960s commercial shell into a small movement studio. Lime plaster walls, narra floors, no signage out front.</p>
+                </div>
+                <div class="right-meta meta">
+                    <div>Interiors</div>
+                    <div>Small commercial</div>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="section-sm">
+    <div class="wrap">
+        <div style="max-width:36rem; margin-bottom:3rem;">
+            <span class="eyebrow">What we do</span>
+            <h2 style="margin-top:.75rem;">Three things, done carefully.</h2>
+        </div>
+        <div class="services">
+            <div>
+                <span class="num">01</span>
+                <h3>Architecture</h3>
+                <p>New houses, renovations, and small commercial buildings. We design and document each project end-to-end and remain present through construction.</p>
+            </div>
+            <div>
+                <span class="num">02</span>
+                <h3>Interiors</h3>
+                <p>Layout, millwork, lighting, and finishes for homes and small interiors. We work in materials we know first-hand — narra, capiz, lime plaster, raw concrete.</p>
+            </div>
+            <div>
+                <span class="num">03</span>
+                <h3>Planning</h3>
+                <p>Site studies, feasibility reports, and master plans for clients evaluating a lot or staging work in phases. Often the first conversation we have.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-strip">
+    <span class="eyebrow">Begin a project</span>
+    <h2 class="display" style="margin-top:1rem; font-weight:300;">Begin a project in Batangas.</h2>
+    <p class="lead" style="max-width:46ch; margin: 1.5rem auto 2.5rem; color:var(--ink-soft);">If you are planning a house or a small commercial space anywhere in Calabarzon or Metro Manila, we would like to hear about it.</p>
+    <a class="btn btn-primary" href="contact.html">Begin a project</a>
+</section>
+
     </main>
 
     <footer class="site-footer">
@@ -881,14 +1006,14 @@
                     </ul>
                     <h4 style="margin-top:1.75rem;">Sitemap</h4>
                     <ul>
-                        <li><a href="/work">Work</a></li>
-                        <li><a href="/studio">Studio</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="studio.html">Studio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© {{ "now"|date('Y') }} Anyo at Disenyo</span>
+                <span>© 2026 Anyo at Disenyo</span>
                 <span>Architectural services · Batangas, PH</span>
             </div>
         </div>

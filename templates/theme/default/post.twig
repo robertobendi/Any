@@ -1,22 +1,36 @@
 {% extends '@theme/layout.twig' %}
 {% set meta_description = entry.field('excerpt') %}
 
-{% block title %}{{ entry.field('title') }} · {{ site.name }}{% endblock %}
+{% block title %}{{ entry.field('title') }} — Journal · Anyo at Disenyo{% endblock %}
 
 {% block content %}
-<article class="wrap">
-    <h1>{{ entry.field('title') }}</h1>
-    <p class="meta">
-        {{ (entry.publishAt ?? entry.createdAt)|date('F j, Y') }}
-        {% if entry.field('author') %} · by {{ entry.field('author') }}{% endif %}
-    </p>
-    {% if entry.field('excerpt') %}
-        <p class="lede">{{ entry.field('excerpt') }}</p>
-    {% endif %}
-    <div class="article-body">
-        {{ entry.field('body')|markdown }}
-    </div>
-    <hr>
-    <p><a href="/blog">← All posts</a></p>
+<article>
+    <section class="page-intro">
+        <div class="wrap">
+            <div class="offset-col">
+                <span class="eyebrow">{{ (entry.publishAt ?? entry.createdAt)|date('F j, Y') }}{% if entry.field('author') %} · {{ entry.field('author') }}{% endif %}</span>
+                <h1>{{ entry.field('title') }}</h1>
+                {% if entry.field('excerpt') %}
+                    <p class="lead" style="margin-top:2rem; color:var(--ink-soft);">{{ entry.field('excerpt') }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-sm" style="padding-top:0;">
+        <div class="wrap">
+            <div class="offset-col prose">
+                {{ entry.field('body')|markdown|raw }}
+            </div>
+        </div>
+    </section>
 </article>
+
+<section class="section-sm">
+    <div class="wrap">
+        <div class="offset-col">
+            <a class="arrow-link" href="/journal">All journal entries</a>
+        </div>
+    </div>
+</section>
 {% endblock %}

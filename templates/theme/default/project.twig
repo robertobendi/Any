@@ -1,0 +1,71 @@
+{% extends '@theme/layout.twig' %}
+
+{% block title %}{{ entry.field('title') }} — Anyo at Disenyo{% endblock %}
+{% block description %}{{ entry.field('excerpt')|escape }}{% endblock %}
+
+{% set active_page = 'work' %}
+
+{% block content %}
+
+{% set cover = entry.field('cover_image') %}
+{% if cover %}
+    <section class="full-bleed" style="aspect-ratio: 16/9; overflow:hidden; background: var(--lime-2);">
+        <img class="img-fit" src="{{ cover }}" alt="{{ entry.field('title') }} — cover image">
+    </section>
+{% endif %}
+
+<section class="section">
+    <div class="wrap">
+        <div style="display:grid; grid-template-columns: 6fr 6fr; gap:4rem; align-items:start;">
+            <div>
+                <span class="eyebrow">{{ entry.field('location') }} · {{ entry.field('year') }}</span>
+                <h1 class="display" style="margin-top:1rem; font-weight:300;">{{ entry.field('title') }}</h1>
+                <p class="lead" style="margin-top:1.5rem; color:var(--ink-soft);">{{ entry.field('excerpt') }}</p>
+            </div>
+            <aside style="display:grid; grid-template-columns: max-content 1fr; gap:.8rem 1.5rem; padding-top:.5rem;">
+                <dt class="meta">Scope</dt><dd style="margin:0;">{{ entry.field('scope') }}</dd>
+                <dt class="meta">Status</dt><dd style="margin:0;">{{ entry.field('status') }}</dd>
+                {% if entry.field('area_sqm') %}
+                <dt class="meta">Area</dt><dd style="margin:0;">{{ entry.field('area_sqm') }} sqm</dd>
+                {% endif %}
+                <dt class="meta">Location</dt><dd style="margin:0;">{{ entry.field('location') }}</dd>
+                <dt class="meta">Year</dt><dd style="margin:0;">{{ entry.field('year') }}</dd>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="section-sm" style="padding-top:0;">
+    <div class="wrap">
+        <div class="offset-col prose">
+            {{ entry.field('body')|markdown|raw }}
+        </div>
+    </div>
+</section>
+
+{% set gallery = entry.field('gallery') %}
+{% if gallery %}
+<section class="section-sm" style="padding-top:0;">
+    <div class="wrap">
+        <span class="eyebrow">Gallery</span>
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: var(--gutter); margin-top:1.5rem;">
+            {% for url in gallery|split('\n') %}
+                {% if url|trim %}
+                <figure style="margin:0; aspect-ratio: 4/5; overflow:hidden; background:var(--lime-2);">
+                    <img class="img-fit" src="{{ url|trim }}" alt="{{ entry.field('title') }} — detail">
+                </figure>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<section class="cta-strip">
+    <span class="eyebrow">Begin a project</span>
+    <h2 class="display" style="margin-top:1rem; font-weight:300;">A house, a renovation, a small commercial space.</h2>
+    <a class="btn btn-primary" href="/contact">Begin a project</a>
+    <div style="margin-top:2rem;"><a class="arrow-link" href="/work">All projects</a></div>
+</section>
+
+{% endblock %}

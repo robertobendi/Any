@@ -1,11 +1,15 @@
 {% extends '@theme/layout.twig' %}
 
-{% block title %}Not found · {{ site.name }}{% endblock %}
+{% block title %}Page not found — Anyo at Disenyo{% endblock %}
 
 {% block content %}
-<div class="wrap empty-state">
-    <h1>404</h1>
-    <p class="lede">That page doesn’t exist — or has been moved.</p>
-    <p><a href="/">Go home →</a></p>
-</div>
+<section class="center-stage">
+    <span class="eyebrow">404 · Not here</span>
+    <h1 class="display" style="margin-top:1.5rem; font-weight:300;">A page is missing from this site.</h1>
+    <p style="margin-top:1.5rem;">The address you followed does not point to anything we have published. The studio's work, philosophy, and contact details are linked below.</p>
+    <div style="display:flex; gap:1rem; margin-top:2.5rem; flex-wrap:wrap; justify-content:center;">
+        <a class="btn btn-primary" href="/">Back home</a>
+        <a class="btn btn-ghost" href="/work">See the work</a>
+    </div>
+</section>
 {% endblock %}

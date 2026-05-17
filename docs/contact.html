@@ -3,12 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{{ site.name }} — Architecture rooted in Batangas{% endblock %}</title>
-    {% block meta %}
-    <meta name="description" content="{% block description %}A small architectural practice in Batangas City designing homes and spaces that belong to the Filipino climate, light, and the people who live in them.{% endblock %}">
-    {% endblock %}
-    <meta name="theme-color" content="#F2EBDE">
-    <link rel="icon" type="image/jpeg" href="/uploads/logo-anyo-at-disenyo.jpg">
+    <title>Contact — Anyo at Disenyo, Batangas City</title>
+        <meta name="description" content="Reach Anyo at Disenyo by email, phone, or inquiry form. The studio is in Batangas City and takes on a small number of projects each year.">
+        <meta name="theme-color" content="#F2EBDE">
+    <link rel="icon" type="image/jpeg" href="uploads/logo-anyo-at-disenyo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -826,16 +824,14 @@
         }
         @media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
     </style>
-    {% block head %}{% endblock %}
-</head>
+    </head>
 <body>
-    <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+    <a href="contact.html#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
-    <header class="site-header{% if hero_header is defined and hero_header %} is-translucent{% endif %}" id="siteHeader">
+    <header class="site-header" id="siteHeader">
         <div class="wrap inner">
-            <a class="brand" href="/" aria-label="Anyo at Disenyo — home">
-                {# Mark: an interlocked "ad" monogram rendered as inline SVG so it scales crisply at small sizes. #}
-                <svg class="mark" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" aria-hidden="true">
+            <a class="brand" href="index.html" aria-label="Anyo at Disenyo — home">
+                                <svg class="mark" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" aria-hidden="true">
                     <path d="M21 15c-7 0-12 6-12 15s5 15 12 15 12-6 12-15-5-15-12-15z"/>
                     <path d="M39 15c-7 0-12 6-12 15s5 15 12 15 12-6 12-15-5-15-12-15z"/>
                 </svg>
@@ -843,16 +839,134 @@
             </a>
             <button class="menu-toggle" aria-controls="primaryNav" aria-expanded="false" id="menuToggle">Menu</button>
             <nav class="primary-nav" id="primaryNav" aria-label="Primary">
-                <a href="/work"{% if active_page is defined and active_page == 'work' %} aria-current="page"{% endif %}>Work</a>
-                <a href="/studio"{% if active_page is defined and active_page == 'studio' %} aria-current="page"{% endif %}>Studio</a>
-                <a href="/contact"{% if active_page is defined and active_page == 'contact' %} aria-current="page"{% endif %}>Contact</a>
+                <a href="work.html">Work</a>
+                <a href="studio.html">Studio</a>
+                <a href="contact.html" aria-current="page">Contact</a>
                 <a class="nav-fb" href="https://www.facebook.com/anyoatdisenyo" target="_blank" rel="noopener" aria-label="Facebook page">Facebook</a>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        {% block content %}{% endblock %}
+        
+<section class="page-intro">
+    <div class="wrap">
+        <div class="offset-col">
+            <span class="eyebrow">Contact</span>
+            <h1>Begin a project.</h1>
+            <p class="lead" style="margin-top:2rem; color:var(--ink-soft);">If you are planning a house, a renovation, or a small commercial fit-out anywhere in Calabarzon or Metro Manila, send a short note and we will get back to you within a few working days.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-sm">
+    <div class="wrap">
+        <div class="contact-grid">
+
+            <aside class="contact-details">
+                <dl>
+                    <div>
+                        <dt>Email</dt>
+                        <dd><a href="mailto:hello@anyoatdisenyo.ph">hello@anyoatdisenyo.ph</a><br>
+                            <span class="meta" style="text-transform:none; letter-spacing:0; color:var(--tabako);">Email is the fastest way to reach the studio.</span></dd>
+                    </div>
+                    <div>
+                        <dt>Phone</dt>
+                        <dd><a href="tel:+63432000000">+63 43 200 0000</a><br>
+                            <span class="meta" style="text-transform:none; letter-spacing:0; color:var(--tabako);">Mon — Fri, 9am – 6pm Philippine time.</span></dd>
+                    </div>
+                    <div>
+                        <dt>Studio</dt>
+                        <dd>Batangas City<br>
+                            Batangas, Philippines<br>
+                            <span class="meta" style="text-transform:none; letter-spacing:0; color:var(--tabako);">By appointment — the studio is not a walk-in office.</span></dd>
+                    </div>
+                    <div>
+                        <dt>Elsewhere</dt>
+                        <dd><a href="https://www.facebook.com/anyoatdisenyo" target="_blank" rel="noopener">Facebook · @anyoatdisenyo</a></dd>
+                    </div>
+                </dl>
+            </aside>
+
+            <div>
+                <p style="font-family:'Fraunces',serif; font-style:italic; font-weight:300; font-size:1.25rem; line-height:1.5; color:var(--ink-soft); margin:0 0 2.5rem; max-width:42ch;">
+                    A few sentences about the site, the project, and what you are working towards is enough to start. We will reply with next steps.
+                </p>
+
+                                <form action="https://formspree.io/f/REPLACE_ME"
+                      method="POST"
+                      class="contact-form"
+                      aria-label="Project inquiry form">
+                    <div class="row">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" required autocomplete="name">
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" required autocomplete="email">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <span>Phone (optional)</span>
+                            <input type="tel" name="phone" autocomplete="tel">
+                        </label>
+                        <label>
+                            <span>Project type</span>
+                            <select name="project_type" required>
+                                <option value="" selected>Choose one…</option>
+                                <option value="Residence">New residence</option>
+                                <option value="Renovation">Renovation</option>
+                                <option value="Small commercial">Small commercial</option>
+                                <option value="Interior fit-out">Interior fit-out</option>
+                                <option value="Planning / feasibility">Planning / feasibility</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label>
+                        <span>Project location</span>
+                        <input type="text" name="location" placeholder="e.g. Lipa, Batangas">
+                    </label>
+                    <label>
+                        <span>About the project</span>
+                        <textarea name="message" rows="6" required placeholder="The site, the brief, and roughly when you'd like to start."></textarea>
+                    </label>
+                                        <input type="text" name="_hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+                    <button type="submit" class="btn btn-primary">Send inquiry</button>
+                    <p style="font-size:.8125rem; color:var(--tabako); margin:0;">By sending, you agree we may store your message to reply to it. No newsletter, no list.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-sm" style="padding-top:0;">
+    <div class="wrap">
+        <span class="eyebrow">Find the studio</span>
+        <h2 style="margin-top:.75rem; margin-bottom:2rem;">Based in Batangas City.</h2>
+        <figure style="margin:0; border:1px solid var(--lime);">
+            <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=121.0470%2C13.7475%2C121.0770%2C13.7675&layer=mapnik&marker=13.7575%2C121.0620"
+                width="100%"
+                height="420"
+                style="border:0; display:block;"
+                loading="lazy"
+                title="Map — Anyo at Disenyo studio, Batangas City"></iframe>
+            <figcaption style="padding:1.5rem; background:var(--bone-2); display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
+                <div>
+                    <strong style="font-family:'Fraunces',serif; font-weight:400; font-size:1.125rem;">Anyo at Disenyo</strong><br>
+                    <span class="meta" style="text-transform:none; letter-spacing:0;">Batangas City, Batangas — Philippines</span>
+                </div>
+                <div style="display:flex; gap:1.5rem; align-items:center;">
+                    <a href="https://www.openstreetmap.org/?mlat=13.7575&mlon=121.0620#map=15/13.7575/121.0620" target="_blank" rel="noopener" class="arrow-link">Open in OpenStreetMap</a>
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+</section>
+
     </main>
 
     <footer class="site-footer">
@@ -881,14 +995,14 @@
                     </ul>
                     <h4 style="margin-top:1.75rem;">Sitemap</h4>
                     <ul>
-                        <li><a href="/work">Work</a></li>
-                        <li><a href="/studio">Studio</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="studio.html">Studio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© {{ "now"|date('Y') }} Anyo at Disenyo</span>
+                <span>© 2026 Anyo at Disenyo</span>
                 <span>Architectural services · Batangas, PH</span>
             </div>
         </div>
